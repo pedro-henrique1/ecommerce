@@ -1,0 +1,10 @@
+{
+    "name": "pedro/ecomerce",
+    "authors": [
+        {
+            "name": "pedro",
+            "email": "ph8464803@gmail.com"
+        }
+    ],
+    "require": {}
+}
