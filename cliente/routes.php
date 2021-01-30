@@ -1,10 +1,9 @@
 <?php
 
+require  __DIR__ . '/db.php';
+
 
 if (resolve('/')) {
-    render('cliente/home', 'cliente');
+
+    render('produto/home', 'produto');
 }
-
-
-
-

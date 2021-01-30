@@ -12,7 +12,7 @@ if (resolve('/(.*)')) {
     require __DIR__ . '/cliente/routes.php';
 }else {
     http_response_code(500);
-    echo 'pagina não encontrada';
+    echo 'Pagina não encontrada';
 }
 
 
