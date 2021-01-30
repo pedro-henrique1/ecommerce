@@ -6,5 +6,8 @@
             "email": "ph8464803@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-mysqli": "*",
+      "ext-pdo": "*"
+    }
 }
