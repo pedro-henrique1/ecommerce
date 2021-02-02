@@ -1,9 +1,7 @@
 <?php
 
 require  __DIR__ . '/db.php';
-
-
 if (resolve('/')) {
-
-    render('produto/home', 'produto');
+    $products = $allProduct();
+    render('produto/home', 'produto', ['products' => $products]);
 }

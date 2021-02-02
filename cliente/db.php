@@ -1,7 +1,9 @@
 <?php
 
 
-function ProductAll() use($conn) {
-    $sql = 'SELECT * FROM produtos';
-    $stmt = $conn->prepare();
-}
+$allProduct = function () use($conn) {
+    $stmt = $conn->query('SELECT * FROM  produtos');
+    return $stmt->fetchAll();
+
+    die();
+};

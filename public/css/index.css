@@ -1,7 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 a {
   color: #fff !important;
 }
 a .active {
   background-color: blueviolet !important;
   color: aqua !important;
+}
+main {
+  margin: 0 11rem 0 11rem !important;
+}
+
+.cards {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  margin-top: 40rem;
+  justify-items: center;
+  grid-row-gap: 4rem;
+
+}
+
+.card {
+  width: 256px;
+  height: 398px;
+  background-color: var(--white);
+  position: relative !important;
+}
+
+
+.card > .card-img-top {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body > .card-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  height: 32px;
+  line-height: 1.16;
+  margin: 16px 0 8px;
+  color: rgb(102, 102, 102);
+}
+.card-text > small {
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  color: rgb(102, 102, 102);
+}
+
+.card-text-price {
+  font-family: "Roboto", sans-serif;
+  margin: 1rem 0 0 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.star {
+  display: flex;
+  position: relative;
+  margin: 1rem 0 0 0;
+  font-size: 18px;
+  color: #ffc75f;
+}
+
+/** propaganda  */
+.propaganda {
+  width: 100%;
+}
+
+.propaganda > .image-propaganda {
+  height: 341px;
+  position: absolute;
+  width: 79%;
+  display: flex;
+  margin: -38rem 0 0 2rem;
 }
