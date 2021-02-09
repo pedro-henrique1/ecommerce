@@ -13,5 +13,7 @@
     <orderEntry type="library" name="jquery-migrate-1.2.1" level="application" />
     <orderEntry type="library" name="jquery-1.11.0" level="application" />
     <orderEntry type="library" name="slick-carousel" level="application" />
+    <orderEntry type="library" name="jquery-1.12.0" level="application" />
+    <orderEntry type="library" name="slick" level="application" />
   </component>
 </module>

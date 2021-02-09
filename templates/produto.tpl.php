@@ -18,26 +18,45 @@
 
 <body>
 <nav class="navbar navbar-dark bg-dark c-lingth">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav justify-content-center">
+    <a class="navbar-brand" href="#">Menu</a>
+    <ul class="nav justify-content-center m-r-4">
         <li class="nav-item">
             <a class="nav-link active" href="#">Active link</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
         </li>
+        <li class="nav-item user">
+            <a href="/user"> <i class="fa fa-user"></i></a>
+        </li>
+        <p class="name">Olá<br><strong>nome da pessoa</strong></p>
+
     </ul>
 </nav>
 
-<div id="content" class="d-grid">
+<div id="content" class="">
     <?php include $content ?>
 </div>
 
 
+<!-- carousel -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>-->
+<!-- ...  -->
+
+
+<!-- script do carousel -->
+<script>
+    $('.carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+</script>
+<!-- ... -->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>

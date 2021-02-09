@@ -1,11 +1,178 @@
-/* @media (max-width: 1454px) {
-  .cards {
-    margin-left: -11rem;
-  }
+@media only screen and (min-width: 2560px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+
+    .user {
+        font-size: 2.4rem;
+        margin: 0 2rem 0 0;
+        color: var(--white);
+    }
+    .nav  >.name {
+        font-size: 1.2rem;
+        color: var(--white);
+        margin-right: 3rem;
+    }
+
+    .propaganda > .image-propaganda {
+        width: 86%;
+        height: 27%;
+        margin: 4rem 10rem;
+        max-width: 2202px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(6, 1fr) !important;
+        grid-row-gap: 4rem;
+        margin: 18rem 12rem 0 9rem
+    }
+
+    .card {
+        width: 268px !important;
+        height: 437px !important;
+
+    }
+
+    .cards > .card > .card-body > .star {
+        font-size: 24px !important;
+    }
+
+    .cards > .card > .card-body > .card-title {
+        font-size: 21px;
+    }
+
+    .cards > .card > .card-body > .star {
+        position: relative;
+        margin-top: 3rem;
+        font-size: 22px;
+    }
+
+    .cards > .card > .card-body > .card-text-price {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .cards > .card > .card-body > small {
+        font-size: 1.2rem;
+    }
 }
 
-@media (max-width: 1288px) {
-  .cards {
-    margin-right: 3rem !important;
-  }
-} */
+
+@media screen and (max-width: 1440px) {
+    .navbar {
+        width: 100%;
+        font-size: large;
+    }
+
+    .propaganda > .image-propaganda {
+        width: 100%;
+        height: 27%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(5, 1fr) !important;
+        grid-column-gap: 8px;
+        grid-row-gap: 4rem;
+        margin: 18rem 3rem 0 2rem;
+    }
+
+    .card {
+        height: 430px !important;
+
+    }
+
+    .cards > .card > .card-body > .card-title {
+        font-size: 19px;
+    }
+
+    .cards > .card > .card-body > .star {
+        position: relative;
+        margin-top: 3rem;
+        font-size: 22px;
+    }
+
+    .cards > .card > .card-body > .card-text-price {
+        margin-top: 1rem;
+    }
+
+    .cards > .card > .card-body > small {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        width: 100%;
+        font-size: large;
+    }
+
+    .propaganda > .image-propaganda {
+        width: 100%;
+        height: 27%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr) !important;
+        grid-column-gap: 8px;
+        grid-row-gap: 4rem;
+        margin: 10rem 3rem 0 2rem;
+    }
+
+    .card {
+        width: 213px !important;
+    }
+
+    .cards > .card > .card-body > .card-title {
+        font-size: 17px;
+    }
+
+    .cards > .card > .card-body > .star {
+        margin-top: 2rem;
+    }
+
+    .cards > .card > .card-body > small {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .propaganda > .image-propaganda {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-column-gap: 8px;
+        margin: 18rem 3rem 0 2rem;
+    }
+
+    .card {
+        width: 213px !important;
+    }
+
+}
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-column-gap: 8px;
+    }
+
+    .card {
+        width: 213px !important;
+    }
+}
