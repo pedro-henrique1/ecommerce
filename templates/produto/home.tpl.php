@@ -10,20 +10,22 @@
         $product['price_share'] = substr($product['price_share'], 0, 2) . "x";
         ?>
         <!-- wrapper for slides -->
-        <div class="card">
-            <img class="card-img-top" src="/image/air-conditioners.jpg" alt="">
-            <div class="card-body">
-                <h4 class="card-title"><?php echo $product['name'] ?></h4>
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
+        <a class="links" href="/product/cod">
+            <div class="card">
+                <img class="card-img-top" src="/image/air-conditioners.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title"><?php echo $product['name'] ?></h4>
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="card-text-price">R$ <?php echo $product['price'] ?></p>
+                    <small><?php echo $product['price_share'] ?> de R$100 sem juros</small>
                 </div>
-                <p class="card-text-price">R$ <?php echo $product['price'] ?></p>
-                <small><?php echo $product['price_share'] ?> de R$100 sem juros</small>
             </div>
-        </div>
+        </a>
     <?php endforeach ?>
 </div>

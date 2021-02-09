@@ -19,17 +19,17 @@
 <body>
 <nav class="navbar navbar-dark bg-dark c-lingth">
     <a class="navbar-brand" href="#">Menu</a>
-    <ul class="nav justify-content-center m-r-4">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Active link</a>
+    <ul class="nav justify-content-center m-r4">
+        <li class="link">
+            <a class="nav-link link" href="#">Active link</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+        <li class="link">
+            <a class="nav-link link" href="#">Link</a>
         </li>
         <li class="nav-item user">
-            <a href="/user"> <i class="fa fa-user"></i></a>
+            <a href="/user"> <i class="fa fa-user-circle"></i></a>
         </li>
-        <p class="name">Olá<br><strong>nome da pessoa</strong></p>
+        <p class="name">Olá<br><strong>nome pessoa</strong></p>
 
     </ul>
 </nav>
