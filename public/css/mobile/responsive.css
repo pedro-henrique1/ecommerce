@@ -83,8 +83,10 @@
 
     .propaganda > .image-propaganda {
         width: 80%;
-        margin: 0 7rem 0 7rem;
+        margin: 0 12rem;
         height: 27%;
+        left: 0;
+        right: 0;
     }
 
     .cards {
@@ -168,6 +170,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
     .navbar {
         width: 100%;
+        height: 7vh;
     }
 
     .nav > .user {
@@ -176,7 +179,7 @@
     }
 
     .nav > .name {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .nav > .link {

@@ -10,7 +10,7 @@
         $product['price_share'] = substr($product['price_share'], 0, 2) . "x";
         ?>
         <!-- wrapper for slides -->
-        <a class="links" href="/product/cod">
+        <a class="links" href="/produtos/<?php echo $product['id'] ?>">
             <div class="card">
                 <img class="card-img-top" src="/image/air-conditioners.jpg" alt="">
                 <div class="card-body">

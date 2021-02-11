@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+body {
+    border-color: #666666 !important;
+}
+.produto {
+    width: 100%;
+}
+
+.produto > .card {
+    width: 100% !important;
+    height: 50% !important;
+    border-color: transparent;
+}
+
+.produto > .card .card-title {
+    font-size: 1.2rem;
+}
+
+.produto > .card .card-body .cod {
+    font-size: 12px;
+    position: absolute;
+    margin: -0.9rem 0 0 6rem;
+}
+
+.produto > .card .card-body .star {
+    font-size: 15px;
+    margin: -1rem 0 0 0;
+}
+.produto > .card .card-body .voltagem {
+    font-size: 15px;
+}
+
+.produto > .card .card-body .link {
+    color: #666 !important;
+}
+.produto > .card .card-body .fa-angle-right {
+    margin-left: 4rem;
+    color: #666 ;
+}
+
+.price  {
+    width: 90% !important;
+    height: 50% !important;
+    margin: 3rem 1rem 0 1rem;
+}
+.badge-success {
+    margin: 1.6rem 0 0 7.7rem;
+    position: absolute
+}
+
+.price .card-body .card-text-price {
+    font-size: 1.5rem;
+}
+
+.price .card-body .cartao {
+  font-size: 1rem;
+}
+
+.price .card-body .cartao .fa-angle-right {
+    color: #666;
+    margin-left: 5rem;
+    font-size: 1.2rem;
+}
+
+.frete {
+    width: 90% !important;
+    height: 15vh !important;
+    margin: 3rem 1rem 0 1rem;
+}
+
+.frete > .card-body > .form-frete .label {
+    font-family: "Roboto", sans-serif;
+}
+
+.frete > .card-body >  .form-frete > .label >.input-frete {
+    width: 80%;
+    height: 5vh;
+    margin-top: 0.5rem;
+    outline: none;
+    border: 1px solid;
+    border-radius: 6px;
+    max-width: 29vw;
+}
+
+
+.compra {
+    width: 100% !important;
+    height: 21.5vh !important;
+    box-shadow: rgba(0, 0, 0, 0.27) 0 -2px 12px -2px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid rgb(211, 210, 210);
+}
+
+.compra > .card-body > .card-price {
+    font-size: 1.3rem;
+}
+
+.compra > .card-body > .card-small {
+    font-size: 0.8rem;
+
+}
