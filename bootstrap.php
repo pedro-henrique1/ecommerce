@@ -9,7 +9,9 @@ require __DIR__ . '/src/error-handler.php';
 require __DIR__ . '/src/connection.php';
 
 
-if (resolve('/(.*)')) {
+if (resolve('/admin/?(.*)')) {
+    require __DIR__ . '/admin/routes.php';
+}elseif (resolve('/(.*)')) {
     require __DIR__ . '/cliente/routes.php';
 }else {
     http_response_code(500);

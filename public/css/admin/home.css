@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+
+}
+.sidebar .nav-item {
+    width: 110%;
+    margin: 0.4rem 0 0 0;
+}
+
+
+.sidebar .nav-link.active {
+    color: #007bff !important;
+}
+
+.sidebar .nav-link i {
+    margin: 0 0.3rem 0 -0.5rem;
+    align-items: end;
+}
+
+
+.sidebar .nav-link .fa-shopping-cart {
+    margin-left: -3px;
+}
