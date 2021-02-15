@@ -9,7 +9,8 @@ function produto_get_data($redirectOnError): array
     $price_share = filter_input(INPUT_POST, 'price_share');
     $image = filter_input(INPUT_POST, 'image');
 
-    if (is_null($name)) {
+
+    if (empty(trim($name)) or empty($price) or empty(trim($description)) or empty($category_id) or empty($price_share) or empty(trim($image)) == "") {
         header('location:' . $redirectOnError);
         die();
     }
@@ -18,7 +19,7 @@ function produto_get_data($redirectOnError): array
 
 
 $CreatProduct = function () use ($conn) {
-    $data = produto_get_data('/admin/produto');
+    $data = produto_get_data('/admin/produtos');
 
     $sql = 'INSERT INTO produtos (name, description, category_id, price, price_share, image) VALUE (:name, :description, :category_id, :price, :price_share, :image);';
 

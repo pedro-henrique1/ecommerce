@@ -47,7 +47,7 @@
     <div class="card-body">
         <form action="" method="post" class="form-frete">
             <label class="label" for="frete">Calcular frete e prazo
-                <input type="text" class="input-frete" name="frete" id="frete" placeholder="calcular">
+                <input type="text" class="cep input-frete" name="frete" id="frete" placeholder="calcular">
                 <button type="button" class="btn btn-primary">ok</button>
             </label>
         </form>

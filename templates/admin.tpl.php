@@ -39,6 +39,11 @@
                            class="nav-link <?php if (resolve('/admin/produtos.*')) : ?> active <?php endif ?>">
                             <i class="fa fa-shopping-cart"></i> produtos</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/"
+                           class="nav-link <?php if (resolve('/')) : ?> active <?php endif ?>">
+                             Voltar  a pagína inicial</a>
+                    </li>
                 </ul>
             </div>
         </nav>
