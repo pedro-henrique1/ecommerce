@@ -7,8 +7,8 @@ body {
 .sidebar .nav-link {
     font-weight: 500;
     color: #333;
-
 }
+
 .sidebar .nav-item {
     width: 110%;
     margin: 0.4rem 0 0 0;
@@ -28,3 +28,4 @@ body {
 .sidebar .nav-link .fa-shopping-cart {
     margin-left: -3px;
 }
+

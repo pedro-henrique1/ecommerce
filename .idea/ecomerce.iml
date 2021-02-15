@@ -15,5 +15,7 @@
     <orderEntry type="library" name="slick-carousel" level="application" />
     <orderEntry type="library" name="jquery-1.12.0" level="application" />
     <orderEntry type="library" name="slick" level="application" />
+    <orderEntry type="library" name="loader" level="application" />
+    <orderEntry type="library" name="Chart.js" level="application" />
   </component>
 </module>
