@@ -30,7 +30,7 @@ $CreatProduct = function () use ($conn) {
     $caminho_imagem = "upload/" . $nome_imagem;
     move_uploaded_file($image["tmp_name"], $caminho_imagem);
 
-    $reference = mt_getrandmax();
+    $reference = md5(uniqid(time()));
 
     $sql = 'INSERT INTO produtos (name, description, category_id, price, price_share, image,reference) VALUE (:name, :description, :category_id, :price, :price_share, :image, :reference);';
 

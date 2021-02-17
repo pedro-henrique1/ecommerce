@@ -8,6 +8,7 @@
     ],
     "require": {
       "ext-mysqli": "*",
-      "ext-pdo": "*"
+      "ext-pdo": "*",
+        "ircmaxell/random-lib": "^1.2"
     }
 }

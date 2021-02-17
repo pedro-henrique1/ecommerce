@@ -6,6 +6,23 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit405242e8ca594aaacc68cddbe7de6847
 {
+    public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'SecurityLib' => 
+            array (
+                0 => __DIR__ . '/..' . '/ircmaxell/security-lib/lib',
+            ),
+        ),
+        'R' => 
+        array (
+            'RandomLib' => 
+            array (
+                0 => __DIR__ . '/..' . '/ircmaxell/random-lib/lib',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -13,6 +30,7 @@ class ComposerStaticInit405242e8ca594aaacc68cddbe7de6847
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixesPsr0 = ComposerStaticInit405242e8ca594aaacc68cddbe7de6847::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit405242e8ca594aaacc68cddbe7de6847::$classMap;
 
         }, null, ClassLoader::class);
