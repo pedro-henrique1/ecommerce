@@ -12,7 +12,7 @@
         <!-- wrapper for slides -->
         <a class="links" href="/produtos/<?php echo $product['reference'] ?>">
             <div class="card">
-                <img class="card-img-top mt-1" src="upload/<?php echo $product['image']?>" alt="">
+                <img class="card-img-top mt-2" src="upload/<?php echo $product['image']?>" alt="image produto">
                 <div class="card-body">
                     <h4 class="card-title"><?php echo $product['name'] ?></h4>
                     <div class="star">
