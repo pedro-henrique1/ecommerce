@@ -1,35 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 @media (min-width: 2560px) {
     .produto > .card {
         width: 32% !important;
         height: 50vh !important;
         margin: 8rem 5rem 0 24rem;
-        border: 1px solid rgba(0,0,0,.125) !important;
     }
-    .produto > .card > .card-body >.star {
+
+    .produto > .card > .card-body > .star {
         margin-top: 2rem;
     }
-    .produto > .card > .card-body >.cod {
+
+    .produto > .card > .card-body > .cod {
         margin-top: 1.1rem;
     }
+
     .price {
         width: 17% !important;
         float: right;
         margin: -38.6rem 0 0 1.5rem;
         border-bottom-color: transparent;
     }
+
     .frete {
         width: 17% !important;
         float: right;
         border-top-color: transparent;
-        margin: -27rem 0 0 1.5rem ;
+        margin: -27rem 0 0 1.5rem;
     }
 
     .frete > .card-body {
         margin-top: 1.5rem;
     }
+
     .frete > .card-body > .form-frete > .label > .input-frete {
-       height: 3rem;
+        height: 3rem;
     }
+
     .compra {
         position: relative !important;
         float: right;
@@ -40,6 +47,7 @@
         border-top-color: transparent;
         box-shadow: none;
     }
+
     .price, .frete, .compra {
         margin-right: 53rem !important;
     }
@@ -50,39 +58,39 @@
     .produto > .card {
         width: 39% !important;
         height: 55vh !important;
-        margin: 8rem 5rem 0 10rem;
-        border: 1px solid rgba(0,0,0,.125) !important;
+        margin: 8rem 5rem 0 0;
+        border-color: transparent !important;
     }
-    .produto > .card > .card-body >.star {
-        margin-top: 2rem;
+
+    .produto > .image > .card-img-top {
+        width: 476px !important;
+        height: 500px !important;
+        margin: auto;
     }
-    .produto > .card > .card-body >.cod {
+
+    .produto > .card > .card-body > .star {
+        margin-top: 0;
+    }
+
+    .produto > .card > .card-body > .cod {
         margin-top: 1.7rem;
     }
+
     .price {
         width: 40% !important;
         float: right;
         margin: -32.6rem 0 0 1.5rem;
     }
-    .frete {
-        width: 40% !important;
-        float: right;
-        border-top-color: transparent;
-        margin: -21rem 0 0 1.5rem ;
-    }
-    .compra {
-        position: relative !important;
-        float: right;
-        margin: 0 0 0 33rem !important;
-        width: 40% !important;
-        bottom: 12.8em;
-        z-index: 1;
-        border-top-color: transparent;
-        box-shadow: none;
-    }
-    .price, .frete, .compra {
-        margin-right: 11rem !important;
-    }
+
+    /*.frete {*/
+    /*    width: 40% !important;*/
+    /*    float: right;*/
+    /*    border-top-color: transparent;*/
+    /*    margin: 0 0 0 1.5rem ;*/
+    /*}*/
+    /*.price, .frete, .compra {*/
+    /*    margin-right: 11rem !important;*/
+    /*}*/
 }
 
 
@@ -90,25 +98,29 @@
     .produto > .card {
         width: 49% !important;
         height: 55vh !important;
-        border: 1px solid rgba(0,0,0,.125) !important;
     }
-    .produto > .card > .card-body >.star {
+
+    .produto > .card > .card-body > .star {
         margin-top: 2rem;
     }
-    .produto > .card > .card-body >.cod {
+
+    .produto > .card > .card-body > .cod {
         margin-top: 1.7rem;
     }
+
     .price {
         width: 50% !important;
         float: right;
         margin: -29.6rem 0 0 1.5rem;
     }
+
     .frete {
         width: 50% !important;
         float: right;
         border-top-color: transparent;
-        margin: -18rem 0 0 1.5rem ;
+        margin: -18rem 0 0 1.5rem;
     }
+
     .compra {
         width: 50% !important;
         float: right;
@@ -126,11 +138,12 @@
         width: 50% !important;
         border-color: #666666;
     }
+
     .price {
         width: 50% !important;
         height: 25vh !important;
         float: right;
-        margin: -26.1rem 0 0 0 ;
+        margin: -26.1rem 0 0 0;
     }
 
     .frete {
@@ -138,14 +151,17 @@
         height: 22vh !important;
         float: right;
         border-top-color: transparent;
-        margin: -13rem 0 0 0 ;
+        margin: -13rem 0 0 0;
 
     }
+
     .frete > .card-body > form .input-frete {
         margin-top: 1rem;
     }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 767px) {
+    .description {
 
+    }
 }

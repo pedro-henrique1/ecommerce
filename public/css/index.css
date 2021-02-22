@@ -4,18 +4,11 @@ a {
     color: #fff !important;
 }
 
-a .active {
-    background-color: blueviolet !important;
-    color: aqua !important;
-}
 
 .navbar {
     width: 100%;
 }
 
-/* main {
-  margin: 0 11rem 0 11rem !important;
-} */
 
 /** propaganda  */
 .propaganda {
@@ -32,17 +25,17 @@ a .active {
 
 /* card */
 .cards {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    justify-items: center !important;
+    justify-items: center;
     grid-row-gap: 3rem;
     grid-column-gap: 3rem;
     margin: 6rem 0 0 0;
 }
 
 .card {
-    width: 256px !important;
-    height: 398px !important;
+    width: 256px;
+    height: 398px;
 }
 
 .card {
@@ -50,8 +43,8 @@ a .active {
 }
 
 .card > .card-img-top {
-    width: 200px !important;
-    height: 200px !important;
+    width: 200px;
+    height: 200px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -104,37 +97,37 @@ a .active {
 }
 
 /** carosel  **/
-.slick-track {
-    max-width: 100% !important;
-}
+/*.slick-track {*/
+/*    max-width: 100% !important;*/
+/*}*/
 
-.slick-prev {
-    margin: -31rem 0 0 5rem !important;
-}
+/*.slick-prev {*/
+/*    margin: -31rem 0 0 5rem !important;*/
+/*}*/
 
-.slick-next {
-    margin: -31rem 0 0 9rem;
-    right: 0 !important;
+/*.slick-next {*/
+/*    margin: -31rem 0 0 9rem;*/
+/*    right: 0 !important;*/
 
-}
+/*}*/
 
 
-.carousel.slick-initialized {
-    visibility: visible;
-    opacity: 1;
-    max-width: 100% !important;
-}
+/*.carousel.slick-initialized {*/
+/*    visibility: visible;*/
+/*    opacity: 1;*/
+/*    max-width: 100% !important;*/
+/*}*/
 
-.carousel .slick-slider {
-    display: none;
-}
+/*.carousel .slick-slider {*/
+/*    display: none;*/
+/*}*/
 
-.carousel .slick-slider:first-child {
-    display: block;
-    visibility: hidden;
-}
+/*.carousel .slick-slider:first-child {*/
+/*    display: block;*/
+/*    visibility: hidden;*/
+/*}*/
 
-.carousel.slick-initialized .slick-slider {
-    display: block;
-    visibility: visible !important;
-}
+/*.carousel.slick-initialized .slick-slider {*/
+/*    display: block;*/
+/*    visibility: visible !important;*/
+/*}*/
