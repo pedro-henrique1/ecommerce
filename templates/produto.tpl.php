@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/mobile/responsive.css">
+<!--    <link rel="stylesheet" href="/css/mobile/responsive.css">-->
     <link rel="stylesheet" href="/css/produto.css">
     <link rel="stylesheet" href="/css/mobile/produto.responsive.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,7 +27,7 @@
             <li class="link">
                 <a class="nav-link link" href="#">Link</a>
             </li>
-            <li class="nav-item user">
+            <li class="user">
                 <a href="/user"> <i class="fa fa-user-circle"></i></a>
             </li>
             <p class="name">Olá<br><strong>nome pessoa</strong></p>
