@@ -81,6 +81,6 @@ body {
     margin: 1.5rem 0 0 0;
 }
 
-.description > .card-body > .compra > .frete > form > button {
-    margin: -5rem 0 0 14rem;
+.description > .card-body > .compra > .frete >  form >label >  .input-frete {
+    width: 12rem !important;
 }
