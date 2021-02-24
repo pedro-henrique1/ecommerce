@@ -1,5 +1,9 @@
 <?php
 
+
+include __DIR__ . '/../vendor/autoload.php';
+
+
 function produto_get_data($redirectOnError): array
 {
     $name = filter_input(INPUT_POST, 'name');
@@ -18,8 +22,12 @@ function produto_get_data($redirectOnError): array
 
 
 $CreatProduct = function () use ($conn) {
-    $data = produto_get_data('/admin/produtos');
+    $data = produto_get_data('/admin');
     $image = $_FILES['image'];
+
+    if (empty($image) === '') {
+        die();
+    }
 
     if (!preg_match("/^image\/(pjpeg|jpeg|png)$/", $image['type'])) {
         echo "Isso não é uma imagem.";

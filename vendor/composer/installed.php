@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3d64d97f4fbfcecdab1ee5d71ecdb42383d887a3',
+    'reference' => '4a7e422162d80a38f501c846ef1bff2ab4336406',
     'name' => 'pedro/ecomerce',
   ),
   'versions' => 
@@ -36,7 +36,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3d64d97f4fbfcecdab1ee5d71ecdb42383d887a3',
+      'reference' => '4a7e422162d80a38f501c846ef1bff2ab4336406',
     ),
   ),
 );
