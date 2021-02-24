@@ -25,6 +25,10 @@
       <label for="category">Categoria do produto</label>
       <input type="text" class="form-control" id="category" name="category_id" placeholder="Categoria do produto">
     </div>
+      <div class="col">
+      <label for="voltagem">Voltagem do produto</label>
+      <input type="text" class="form-control" id="voltagem" name="voltagem" placeholder="Voltagem do produto">
+    </div>
     <div class="col">
       <label for="priceShare">Preço das parcelas do produto sem juros</label>
       <input type="text" class="form-control" id="priceShare" name="price_share" placeholder="Preço das parcelas do produto sem juros">

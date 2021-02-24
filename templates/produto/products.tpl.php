@@ -26,7 +26,7 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
             </div>
             <hr>
             <div class="row col-sm voltagem">
-                <span class="voltagem">Voltagem: <strong>220<?php /*echo $product['voltagem']*/ ?>v</strong></span>
+                <span class="voltagem">Voltagem: <strong><?php echo $product['voltagem'] ?>v</strong></span>
             </div>
             <hr>
             <div class="row col-sm compra">
@@ -46,44 +46,3 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
         </div>
     </div>
 </div>
-<!--<div class="card price">-->
-<!--    <div class="card-body">-->
-<!--        <div class="row ml-2">-->
-<!--            <p class="card-text-price">R$ --><?php //echo $product['price'] 
-                                                    ?>
-<!--</p>-->
-<!--            <div class="d-flex">-->
-<!--                <span class="badge badge-success"><i class="fa fa-arrow-down" aria-hidden="true"></i> 20%</span>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <small>-->
-<?php //echo $product['price_share'] 
-?>
-<!--x de R$100 sem juros no <strong>cartão de crédito</strong><br>-->
-<!--            com Ame e receba R$ 10,50 <span style="color: rgb(64, 205, 40) ">(1% de volta)</span>-->
-<!--        </small><br>-->
-<!--        <hr>-->
-<!--        -->
-<!--    </div>-->
-<!--</div>-->
-<!--    <div class="card compra">-->
-<!--        <div class="card-body">-->
-<!--            <h4 class="card-price ">R$ --><?php //echo $product['price'] 
-                                                ?>
-<!--</h4>-->
-<!--            <small class="card-small">--><?php //echo $product['price_share'] 
-                                                ?>
-<!--x de R$100 sem juros no <strong>cartão de-->
-<!--                    crédito</strong><br>-->
-<!--                com Ame e receba R$ 10,50 <span style="color: rgb(64, 205, 40) ">(1% de volta)</span>-->
-<!--            </small><br>-->
-<!--            <a href=""><small class="cartao">Mais forma de pagar <i class="fa fa-angle-right"-->
-<!--                                                                    aria-hidden="true"></i></small></a>-->
-<!--            <hr>-->
-<!--            <a href="#" role="button">-->
-<!--                <button type="button" class="btn btn-success"><i class="fa fa-cart-plus" aria-hidden="true"></i> comprar-->
-<!--                </button>-->
-<!--            </a>-->
-<!--        </div>-->
-
-<!--    </div>-->
