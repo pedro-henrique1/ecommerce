@@ -48,7 +48,6 @@
 </form>
 
 <script>
-    // $('.needs-validation').validate();
     $().ready(function ($) {
         $(".needs-validation").validate(
             {
