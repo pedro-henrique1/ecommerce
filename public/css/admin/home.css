@@ -29,3 +29,11 @@ body {
     margin-left: -3px;
 }
 
+.error {
+    border-color: #fa1e0e;
+    color: #fa1e0e;
+}
+
+.valid {
+    border-color: green;
+}

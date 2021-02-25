@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{Chart.js, all, font-awesome, jquery-1.11.0, jquery-1.12.0, jquery-migrate-1.2.1, loader, slick, slick-carousel}" />
+    <file url="PROJECT" libraries="{Chart.js, all, font-awesome, jquery, jquery-1.11.0, jquery-1.12.0, jquery-3.5.1.slim, jquery-migrate-1.2.1, jquery-validate, jquery.mask, loader, slick, slick-carousel}" />
   </component>
 </project>

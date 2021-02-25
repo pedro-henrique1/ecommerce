@@ -20,5 +20,9 @@
     <orderEntry type="library" name="slick" level="application" />
     <orderEntry type="library" name="loader" level="application" />
     <orderEntry type="library" name="Chart.js" level="application" />
+    <orderEntry type="library" name="jquery.mask" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jquery-3.5.1.slim" level="application" />
+    <orderEntry type="library" name="jquery-validate" level="application" />
   </component>
 </module>

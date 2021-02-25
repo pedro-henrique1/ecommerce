@@ -31,13 +31,15 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
             <hr>
             <div class="row col-sm compra">
                 <a href="#" role="button">
-                    <button type="button" class="btn btn-success btn-lg w-5"><i class="fa fa-cart-plus" aria-hidden="true"></i> comprar
+                    <button type="button" class="btn btn-success btn-lg w-5"><i class="fa fa-cart-plus"
+                                                                                aria-hidden="true"></i> comprar
                     </button>
                 </a>
                 <div class="form-group frete">
                     <form action="" method="post" class="form-frete">
                         <label class="label" for="frete">Calcular frete e prazo
-                            <input type="text" class="form-control cep input-frete" name="frete" id="frete" placeholder="calcular">
+                            <input type="text" class="form-control cep input-frete" name="frete" id="frete"
+                                   placeholder="calcular">
                         </label>
                         <button type="button" class="btn btn-primary">ok</button>
                     </form>
@@ -46,3 +48,9 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function($){
+        $('.input-frete').mask('00000-000');
+    });
+</script>
