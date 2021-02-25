@@ -31,9 +31,16 @@ body {
 
 .error {
     border-color: #fa1e0e;
-    color: #fa1e0e;
 }
 
 .valid {
     border-color: green;
+}
+
+.form-control-file.error {
+    color: #fa1e0e;
+}
+
+.form-control-file.valid {
+    color: green;
 }

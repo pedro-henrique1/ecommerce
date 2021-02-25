@@ -84,38 +84,37 @@
                     },
                     image: {
                         required: true,
-                        accept: "image/jpg,image/jpeg,image/png"
+                        accept: "image/jpg, image/jpeg, image/png"
                     }
                 },
                 messages: {
                     name: {
                         required: "Esse campo não pode ser vazio",
-                        maxlength: "apenas 500 caracteres"
                     },
                     price: {
                         required: "Esse campo não pode ser vazio",
-                        password: "digite devmedia"
+                        number: "Este campo de conter apenas numeros"
                     },
                     description: {
                         required: "Esse campo não pode ser vazio",
-                        equal: "digite Validado"
+                        maxlength: "apenas 500 caracteres"
                     },
                     category_id: {
                         required: "Campo não pode ser vazio",
-                        equal: "digite Validado"
+                        number: "Este campo deve conter apenas numero"
                     },
                     voltagem: {
                         required: "Esse campo não pode ser vazio",
-                        equal: "digite Validado"
+                        number: "Este campo deve conter apenas numero"
                     },
                     price_share: {
                         required: "Esse campo não pode ser vazio",
-                        equal: "digite Validado"
+                        number: "Este campo deve conter apenas numero"
                     },
-                    // image: {
-                    //     required: "Isso não e uma imagem",
-                    //     equal: "digite Validado"
-                    // }
+                    image: {
+                        required: "Isso não e uma imagem",
+                        image: "Coloque uma imagem que seja valida"
+                    }
                 },
                 submitHandler: function (form) {
                     form.submit();
