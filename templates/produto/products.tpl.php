@@ -1,4 +1,5 @@
 <?php
+
 $product = $data['product'];
 
 $product['price'] = number_format($product['price'], 2, ",", ".");
@@ -43,6 +44,10 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                         </label>
                         <button type="button" class="btn btn-primary">ok</button>
                     </form>
+                    <span class="result_frete">frete frete frete frete frete frete</span><br>
+                    <span class="result_frete">frete frete frete frete frete frete</span><br>
+                    <span class="result_frete">frete frete frete frete frete frete</span><br>
+                    <span class="result_frete">frete frete frete frete frete frete</span><br>
                 </div>
             </div>
         </div>
@@ -50,7 +55,7 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
 </div>
 
 <script>
-    $(document).ready(function($){
-        $('.input-frete').mask('00000-000');
+    $(document).ready(function ($) {
+        $('.input-frete').mask('00.000-000');
     });
 </script>
