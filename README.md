@@ -44,7 +44,6 @@
 
 Este projeto foi feito para testar minhas habilidades com php msql e bootstrap
 
-
 ## :rocket: Tecnologias
 
 As seguintes ferramentas foram usadas neste projeto:
@@ -57,8 +56,9 @@ As seguintes ferramentas foram usadas neste projeto:
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [php](https://www.php.net/) e do [Mysql](https://www.mysql.com/). <br>
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) ou 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) ou
 [Php Storm](https://www.jetbrains.com/phpstorm/).
+
 ## :checkered_flag: Rodando a aplicação
 
 ```bash
@@ -84,5 +84,7 @@ Este projeto está sob licença do MIT. Para obter mais detalhes, consulte [LICE
 Feito com :heart: de <a href="https://github.com/pedro-henrique1" target="_blank">Pedro</a>
 
 &#xa0;
+
+[![Telegram](https://img.shields.io/badge/-TELEGRAM-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/pedr0_henrique) [![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-henrique-silva-rodrigues-0544ab199/) ![instagram](https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white)
 
 <a href="#top">Back to top</a>
