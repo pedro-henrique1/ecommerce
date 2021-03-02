@@ -5,8 +5,7 @@
     <div class="form-row">
         <div class="col">
             <label for="name">Nome do produto</label>
-            <input type="text" class="form-control" id="name" name="name"
-                   placeholder="Nome do produto">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nome do produto">
         </div>
         <div class="col">
             <label for="price">Preço do produto</label>
@@ -44,13 +43,40 @@
             <small class="form-text text-warning" id="helpFile">Formato de imagem permitida *png, *jpgeg, *jpg</small>
         </div>
     </div>
+
+    <div class="form-row mt-4">
+        <div class="col">
+            <label for="peso">Peso do produto</label>
+            <input type="text" class="form-control" id="peso" name="peso" placeholder="Peso do produto">
+        </div>
+
+        <div class="col">
+            <label for="formato">Formato do produto</label>
+            <input type="text" class="form-control" id="formato" name="formato" placeholder="formato do produto">
+        </div>
+
+        <div class="col">
+            <label for="priceShare">Altura do produto</label>
+            <input type="text" class="form-control" id="Altura" name="altura" placeholder="Altura do produto">
+        </div>
+
+        <div class="col">
+            <label for="category_id">Largura do produto</label>
+            <input type="text" class="form-control" id="Largura" name="largura" placeholder="Largura do produto">
+        </div>
+
+        <div class="col">
+            <label for="voltagem">Diametro do produto</label>
+            <input type="text" class="form-control" id="Diametro" name="diametro" placeholder="Diametro do produto">
+        </div>
+
+    </div>
     <button type="submit" class="btn btn-outline-secondary mt-3  col-2">Criar</button>
 </form>
 
 <script>
     $().ready(function ($) {
-        $(".needs-validation").validate(
-            {
+        $(".needs-validation").validate({
                 errorPlacement: function (error, element) {
                     element.parent("input").next("input").html(error);
                 },
@@ -85,12 +111,88 @@
                     image: {
                         required: true,
                         accept: "image/jpg, image/jpeg, image/png"
+                    },
+                    peso: {
+                        required: true,
+                        number: true
+                    },
+                    formato: {
+                        required: true,
+                        number: true
+                    },
+                    altura: {
+                        required: true,
+                        number: true
+                    },
+                    largura: {
+                        required: true,
+                        number: true
+                    },
+                    diametro: {
+                        required: true,
+                        number: true
                     }
                 },
-                submitHandler: function (form) {
-                    form.submit();
-                },
-            }
-        )
+                // messages: { /*MENSAGENS DO VALIDATE */
+                //     name: {
+                //         required: "Digite corretamente seu Nome ",
+                //         maxlength: "Maxímo de caracteres permitidos 100"
+                //     },
+                //     price: {
+                //         required: "Digite corretamente seu Celular",
+                //         number: "Este campo permiti apenas numeros",
+                //     },
+                // email: "Digite um email válido",
+                // telefone: {
+                //     required: "Digite corretamente seu Celular",
+                //     minlength: "Mínimo de caracteres permitidos 8",
+                //     maxlength: "Maxímo de caracteres permitidos 10"
+                // },
+                // endereco: {
+                //     required: "Digite corretamente seu Celular",
+                //     minlength: "Mínimo de caracteres permitidos 10",
+                //     maxlength: "Maxímo de caracteres permitidos 50"
+                // },
+                // cidade: {
+                //     required: "Digite corretamente seu Celular",
+                //     minlength: "Mínimo de caracteres permitidos 10",
+                //     maxlength: "Maxímo de caracteres permitidos 20"
+                // },
+                // estado: {
+                //     required: "Digite corretamente seu Celular",
+                //     minlength: "Mínimo de caracteres permitidos 2",
+                //     maxlength: "Maxímo de caracteres permitidos 20"
+                // },
+                // cep: {
+                //     required: "Digite corretamente seu Celular",
+                //     minlength: "Mínimo de caracteres permitidos 10",
+                //     maxlength: "Maxímo de caracteres permitidos 11"
+                // },
+                // usuario: {
+                //     required: "Digite corretamente seu Celular",
+                //     minlength: "Mínimo de caracteres permitidos 8",
+                //     maxlength: "Maxímo de caracteres permitidos 10"
+                // },
+                // senha: {
+                //     required: "Digite corretamente seu Celular",
+                //     minlength: "Mínimo de caracteres permitidos 8",
+                //     maxlength: "Maxímo de caracteres permitidos 10"
+                // },
+                // senhaconfirma: {
+                //     equalTo: "As senhas não conferem, redigite!"
+                // },
+                // termos: {
+                //     required: "Por gentileza, aceite os termos"
+                // }
+            },
+            submitHandler
+    :
+
+        function (form) {
+            form.submit();
+        }
+
+    ,
+    })
     })
 </script>
