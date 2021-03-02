@@ -1,8 +1,5 @@
 <div align="center" id="top"> 
-  <img src="/github/app.gif" alt="Ecommerce" />
-
 &#xa0;
-
   <!-- <a href="https://ecommerce.netlify.app">Demo</a> -->
 </div>
 
@@ -33,60 +30,54 @@
 <hr>
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="#dart-about">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#rocket-technologies">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Rodando a aplicação</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
   <a href="https://github.com/pedro-henrique1" target="_blank">Author</a>
 </p>
 
 <br>
 
-## :dart: About
+## :dart: Sobre
 
-Describe your project
+Este projeto foi feito para testar minhas habilidades com php msql e bootstrap
 
-## :sparkles: Features
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+## :rocket: Tecnologias
 
-## :rocket: Technologies
+As seguintes ferramentas foram usadas neste projeto:
 
-The following tools were used in this project:
+- [Php](https://www.php.net/)
+- [Mysql](https://www.mysql.com/)
+- [boostrap](https://getbootstrap.com.br/)
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+## :white_check_mark: Requisitos
 
-## :white_check_mark: Requirements
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [php](https://www.php.net/) e do [Mysql](https://www.mysql.com/). <br>
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) ou 
+[Php Storm](https://www.jetbrains.com/phpstorm/).
+## :checkered_flag: Rodando a aplicação
 
 ```bash
-# Clone this project
+# Clone do projeto
 $ git clone https://github.com/pedro-henrique1/ecommerce
 
-# Access
+# Entra na pasta
 $ cd ecommerce
 
-# Install dependencies
-$ yarn
+# Instalar as dependencias
+$ composer install
 
-# Run the project
-$ yarn start
+# iniciar o projeto
+$ php -S 0.0.0.0:8000 -t public 
 
-# The server will initialize in the <http://localhost:3000>
+# O servidor vai inicializar <http://0.0.0.0:8000>
 ```
 
-## :memo: License
+## :memo: Licença
 
 Este projeto está sob licença do MIT. Para obter mais detalhes, consulte [LICENSE](LICENSE.md).
 
