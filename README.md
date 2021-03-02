@@ -72,7 +72,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/ecommerce
+$ git clone https://github.com/pedro-henrique1/ecommerce
 
 # Access
 $ cd ecommerce
@@ -88,9 +88,9 @@ $ yarn start
 
 ## :memo: License
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+Este projeto está sob licença do MIT. Para obter mais detalhes, consulte [LICENSE](LICENSE.md).
 
-Made with :heart: by <a href="https://github.com/pedro-henrique1" target="_blank">Pedro</a>
+Feito com :heart: de <a href="https://github.com/pedro-henrique1" target="_blank">Pedro</a>
 
 &#xa0;
 
