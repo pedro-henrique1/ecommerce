@@ -5,7 +5,14 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/ircmaxell/random-lib" />
       <path value="$PROJECT_DIR$/vendor/ircmaxell/security-lib" />
+      <path value="$PROJECT_DIR$/vendor/mashape/unirest-php" />
+      <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
 </project>

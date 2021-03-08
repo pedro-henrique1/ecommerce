@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Unirest\\' => array($vendorDir . '/mashape/unirest-php/src'),
     'SecurityLib' => array($vendorDir . '/ircmaxell/security-lib/lib'),
     'RandomLib' => array($vendorDir . '/ircmaxell/random-lib/lib'),
 );

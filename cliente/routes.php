@@ -1,15 +1,21 @@
 <?php
 
-require  __DIR__ . '/db.php';
+require __DIR__ . '/db.php';
 
 if (resolve('/')) {
     $products = $allProduct();
     render('produto/home', 'produto', ['products' => $products]);
-}elseif ($params = resolve( '/produtos/(\w+)')) {
+} elseif ($params = resolve('/produtos/(\w+)')) {
     $product = $ProductSelect($params[1]);
+
+//    $frete = $CreatFrete();
+
+
     if (empty($product)) {
         header('Location: /');
         exit();
     }
     render('produto/products', 'produto', ['product' => $product]);
+} else {
+    header("Location: /");
 }

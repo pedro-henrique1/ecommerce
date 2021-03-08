@@ -7,6 +7,13 @@ namespace Composer\Autoload;
 class ComposerStaticInit405242e8ca594aaacc68cddbe7de6847
 {
     public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+        ),
         'S' => 
         array (
             'SecurityLib' => 

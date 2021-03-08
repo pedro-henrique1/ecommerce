@@ -1,6 +1,8 @@
 <?php
 
+//$frete = $data['frete'];
 $product = $data['product'];
+
 
 $product['price'] = number_format($product['price'], 2, ",", ".");
 $product['description'] = substr($product['description'], 0, 310) . '...';
@@ -37,17 +39,36 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                     </button>
                 </a>
                 <div class="form-group frete">
-                    <form action="" method="post" class="form-frete">
+                    <form action="" method="POST" class="form-frete">
                         <label class="label" for="frete">Calcular frete e prazo
                             <input type="text" class="form-control cep input-frete" name="frete" id="frete"
                                    placeholder="calcular">
                         </label>
-                        <button type="button" class="btn btn-primary">ok</button>
+                        <input type="hidden" class="form-control" name="peso" value="<?php echo $product['peso'] ?>">
+                        <input type="hidden" class="form-control" name="formato"
+                               value="<?php echo $product['formato'] ?>">
+                        <input type="hidden" class="form-control" name="altura"
+                               value="<?php echo $product['altura'] ?>">
+                        <input type="hidden" class="form-control" name="largura"
+                               value="<?php echo $product['largura'] ?>">
+                        <input type="hidden" class="form-control" name="diametro"
+                               value="<?php echo $product['diametro'] ?>">
+                        <input type="hidden" class="form-control" name="comprimento"
+                               value="<?php echo $product['comprimento'] ?>">
+
+                        <button type="submit" class="btn btn-primary">ok</button>
                     </form>
-                    <span class="result_frete">frete frete frete frete frete frete</span><br>
-                    <span class="result_frete">frete frete frete frete frete frete</span><br>
-                    <span class="result_frete">frete frete frete frete frete frete</span><br>
-                    <span class="result_frete">frete frete frete frete frete frete</span><br>
+                    <!--                    --><?php //foreach ($frete as $freteXml) :
+                    //                        if ($freteXml->Erro != 0) {?>
+                    <!--                            <div class="text-danger">Ocorreu um erro</div>--><?php
+                    //                        }
+                    //                        ?>
+                    <!--                        <span class="result_frete">Valor da Entrega R$-->
+                    <?php //echo $freteXml->Valor ?><!--</span>-->
+                    <!--                        <br>-->
+                    <!--                        <span class="result_frete">Entrega em até -->
+                    <?php //echo $freteXml->PrazoEntrega ?><!-- dias</span><br>-->
+                    <!--                    --><?php //endforeach; ?>
                 </div>
             </div>
         </div>

@@ -11,8 +11,6 @@ if (resolve('/admin')) {
 } elseif (resolve('/admin/produtos/create')) {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $CreatProduct();
-//        header('location: /admin/pages');
-//        exit();
     }
     render('admin/create', 'admin');
 } else {

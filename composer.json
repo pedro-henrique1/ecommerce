@@ -9,6 +9,10 @@
     "require": {
       "ext-mysqli": "*",
       "ext-pdo": "*",
-        "ircmaxell/random-lib": "^1.2"
+      "ircmaxell/random-lib": "^1.2",
+      "mashape/unirest-php": "^3.0",
+      "ext-curl": "*",
+      "ext-simplexml": "*",
+      "twbs/bootstrap": "4.1.3"
     }
 }

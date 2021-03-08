@@ -114,6 +114,118 @@
                 "source": "https://github.com/ircmaxell/SecurityLib/tree/master"
             },
             "install-path": "../ircmaxell/security-lib"
+        },
+        {
+            "name": "mashape/unirest-php",
+            "version": "v3.0.4",
+            "version_normalized": "3.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mashape/unirest-php.git",
+                "reference": "842c0f242dfaaf85f16b72e217bf7f7c19ab12cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mashape/unirest-php/zipball/842c0f242dfaaf85f16b72e217bf7f7c19ab12cb",
+                "reference": "842c0f242dfaaf85f16b72e217bf7f7c19ab12cb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "0.1.*",
+                "phpunit/phpunit": "~4.4"
+            },
+            "suggest": {
+                "ext-json": "Allows using JSON Bodies for sending and parsing requests"
+            },
+            "time": "2016-08-11T17:49:21+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Unirest\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Unirest PHP",
+            "homepage": "https://github.com/Mashape/unirest-php",
+            "keywords": [
+                "client",
+                "curl",
+                "http",
+                "https",
+                "rest"
+            ],
+            "support": {
+                "email": "opensource@mashape.com",
+                "issues": "https://github.com/Mashape/unirest-php/issues",
+                "source": "https://github.com/Mashape/unirest-php/tree/master"
+            },
+            "install-path": "../mashape/unirest-php"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v4.1.3",
+            "version_normalized": "4.1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "3b558734382ce58b51e5fc676453bfd53bba9201"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/3b558734382ce58b51e5fc676453bfd53bba9201",
+                "reference": "3b558734382ce58b51e5fc676453bfd53bba9201",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "time": "2018-07-24T15:54:34+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v4-dev"
+            },
+            "install-path": "../twbs/bootstrap"
         }
     ],
     "dev": true,

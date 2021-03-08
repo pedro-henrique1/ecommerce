@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '4a7e422162d80a38f501c846ef1bff2ab4336406',
+    'reference' => '35ed493570fd051ed93d64f4603e3bcfddc4e6f0',
     'name' => 'pedro/ecomerce',
   ),
   'versions' => 
@@ -29,6 +29,15 @@
       ),
       'reference' => 'f3db6de12c20c9bcd1aa3db4353a1bbe0e44e1b5',
     ),
+    'mashape/unirest-php' => 
+    array (
+      'pretty_version' => 'v3.0.4',
+      'version' => '3.0.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '842c0f242dfaaf85f16b72e217bf7f7c19ab12cb',
+    ),
     'pedro/ecomerce' => 
     array (
       'pretty_version' => 'dev-develop',
@@ -36,7 +45,23 @@
       'aliases' => 
       array (
       ),
-      'reference' => '4a7e422162d80a38f501c846ef1bff2ab4336406',
+      'reference' => '35ed493570fd051ed93d64f4603e3bcfddc4e6f0',
+    ),
+    'twbs/bootstrap' => 
+    array (
+      'pretty_version' => 'v4.1.3',
+      'version' => '4.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3b558734382ce58b51e5fc676453bfd53bba9201',
+    ),
+    'twitter/bootstrap' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v4.1.3',
+      ),
     ),
   ),
 );
