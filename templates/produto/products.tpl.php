@@ -1,7 +1,7 @@
 <?php
 
-//$frete = $data['frete'];
 $product = $data['product'];
+//$frete = $data['frete'];
 
 
 $product['price'] = number_format($product['price'], 2, ",", ".");
@@ -32,43 +32,58 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                 <span class="voltagem">Voltagem: <strong><?php echo $product['voltagem'] ?>v</strong></span>
             </div>
             <hr>
+            <a href="#" role="button">
+                <button type="button" class="btn btn-success btn-lg w-5"><i class="fa fa-cart-plus"
+                                                                            aria-hidden="true"></i> comprar
+                </button>
+            </a>
             <div class="row col-sm compra">
-                <a href="#" role="button">
-                    <button type="button" class="btn btn-success btn-lg w-5"><i class="fa fa-cart-plus"
-                                                                                aria-hidden="true"></i> comprar
-                    </button>
-                </a>
                 <div class="form-group frete">
-                    <form action="" method="POST" class="form-frete">
+                    <form action="" method="" class="form-frete">
                         <label class="label" for="frete">Calcular frete e prazo
                             <input type="text" class="form-control cep input-frete" name="frete" id="frete"
                                    placeholder="calcular">
                         </label>
-                        <input type="hidden" class="form-control" name="peso" value="<?php echo $product['peso'] ?>">
-                        <input type="hidden" class="form-control" name="formato"
-                               value="<?php echo $product['formato'] ?>">
-                        <input type="hidden" class="form-control" name="altura"
-                               value="<?php echo $product['altura'] ?>">
-                        <input type="hidden" class="form-control" name="largura"
-                               value="<?php echo $product['largura'] ?>">
-                        <input type="hidden" class="form-control" name="diametro"
-                               value="<?php echo $product['diametro'] ?>">
-                        <input type="hidden" class="form-control" name="comprimento"
-                               value="<?php echo $product['comprimento'] ?>">
+                        <button type="button" onclick="requestFrete()" class="btn btn-primary">Ok</button>
+                        <div class="result_frete" style="margin-right: 7rem;">
 
-                        <button type="submit" class="btn btn-primary">ok</button>
+                        </div>
+                        <script>
+                            function requestFrete() {
+                                let cep = $(".input-frete").val();
+                                let cepFormate = cep.replace('-', '');
+
+                                let url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=' + cepFormate + '&nVlPeso=<?php echo $product['peso'] ?>&nCdFormato=<?php echo $product['formato'] ?>&nVlComprimento=<?php echo $product['comprimento'] ?>&nVlAltura=<?php echo $product['altura'] ?>&nVlLargura=<?php echo $product['largura'] ?>&nCdServico=04510&nVlDiametro=<?php echo $product['diametro'] ?>&StrRetorno=xml';
+                                $.ajax({
+                                    url: url,
+                                    type: 'GET',
+                                    cache: false,
+                                })
+                                    .done(function (data, textStatus, jqXHR) {
+                                        let response = jqXHR.responseText;
+                                        if (window.DOMParser) {
+                                            parser = new DOMParser();
+                                            xmlDoc = parser.parseFromString(response, "text/xml");
+                                        }
+                                        let valorFrete = xmlDoc.getElementsByTagName("Valor")[0].childNodes[0].nodeValue;
+                                        let PrazoFrete = xmlDoc.getElementsByTagName("PrazoEntrega")[0].childNodes[0].nodeValue;
+                                        document.querySelector(".result_frete").innerHTML = '<span> Valor frete ' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>'
+                                    })
+                            }
+
+
+                            // done(function (result) {
+                            //
+                            // })
+                            // .
+                            //     fail(function (error) {
+                            //         console.log(error)
+                            //     })
+                            //     .always(function () {
+                            //         console.log("send complete")
+                            //     })
+                        </script>
                     </form>
-                    <!--                    --><?php //foreach ($frete as $freteXml) :
-                    //                        if ($freteXml->Erro != 0) {?>
-                    <!--                            <div class="text-danger">Ocorreu um erro</div>--><?php
-                    //                        }
-                    //                        ?>
-                    <!--                        <span class="result_frete">Valor da Entrega R$-->
-                    <?php //echo $freteXml->Valor ?><!--</span>-->
-                    <!--                        <br>-->
-                    <!--                        <span class="result_frete">Entrega em até -->
-                    <?php //echo $freteXml->PrazoEntrega ?><!-- dias</span><br>-->
-                    <!--                    --><?php //endforeach; ?>
                 </div>
             </div>
         </div>
@@ -77,6 +92,14 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
 
 <script>
     $(document).ready(function ($) {
-        $('.input-frete').mask('00.000-000');
+        $('.input-frete').mask('00000-000');
     });
+
+    // $.ajax({
+    //
+    //     url: 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=$cepFrete&nVlPeso=$peso&nCdFormato=$formato&nVlComprimento=$comprimento&nVlAltura=$altura&nVlLargura=$largura&nCdServico=04510&nVlDiametro=$diametro&StrRetorno=xml';
+    //     type: "GET",
+    //     data: '',
+    //     dataType: "xml"
+    // })
 </script>

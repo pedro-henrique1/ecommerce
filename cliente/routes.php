@@ -8,9 +8,6 @@ if (resolve('/')) {
 } elseif ($params = resolve('/produtos/(\w+)')) {
     $product = $ProductSelect($params[1]);
 
-//    $frete = $CreatFrete();
-
-
     if (empty($product)) {
         header('Location: /');
         exit();
