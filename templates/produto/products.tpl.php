@@ -70,18 +70,6 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                                         document.querySelector(".result_frete").innerHTML = '<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>'
                                     })
                             }
-
-
-                            // done(function (result) {
-                            //
-                            // })
-                            // .
-                            //     fail(function (error) {
-                            //         console.log(error)
-                            //     })
-                            //     .always(function () {
-                            //         console.log("send complete")
-                            //     })
                         </script>
                     </form>
                 </div>
