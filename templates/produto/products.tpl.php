@@ -67,7 +67,7 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                                         }
                                         let valorFrete = xmlDoc.getElementsByTagName("Valor")[0].childNodes[0].nodeValue;
                                         let PrazoFrete = xmlDoc.getElementsByTagName("PrazoEntrega")[0].childNodes[0].nodeValue;
-                                        document.querySelector(".result_frete").innerHTML = '<span> Valor frete ' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>'
+                                        document.querySelector(".result_frete").innerHTML = '<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>'
                                     })
                             }
 
