@@ -60,33 +60,36 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
 
 <script>
     function requestFrete() {
-        let cep = $(".input-frete").val();
-        let cepFormate = cep.replace('-', '');
-        document.getElementById('clearfix').style.display = 'block'
+        cep = $(".input-frete").val().replace('-', '');
+
+        if (cep === "") {
+            $(".result_frete").html('<span class="text-danger">Preencha o cep corretamente</span>')
+            return
+        }
+        $('#clearfix').show();
 
 
-        let url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=' + cepFormate + '&nVlPeso=<?php echo $product['peso'] ?>&nCdFormato=<?php echo $product['formato'] ?>&nVlComprimento=<?php echo $product['comprimento'] ?>&nVlAltura=<?php echo $product['altura'] ?>&nVlLargura=<?php echo $product['largura'] ?>&nCdServico=04510&nVlDiametro=<?php echo $product['diametro'] ?>&StrRetorno=xml';
+        let url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=' + cep + '&nVlPeso=<?php echo $product['peso'] ?>&nCdFormato=<?php echo $product['formato'] ?>&nVlComprimento=<?php echo $product['comprimento'] ?>&nVlAltura=<?php echo $product['altura'] ?>&nVlLargura=<?php echo $product['largura'] ?>&nCdServico=04510&nVlDiametro=<?php echo $product['diametro'] ?>&StrRetorno=xml';
         $.ajax({
             url: url,
             type: 'GET',
             cache: false,
         })
             .done(function (data, textStatus, jqXHR) {
-                console.log(data, textStatus, jqXHR)
                 let response = jqXHR.responseText;
-                if (window.DOMParser) {
-                    parser = new DOMParser();
-                    xmlDoc = parser.parseFromString(response, "text/xml");
-                }
-                let valorFrete = xmlDoc.getElementsByTagName("Valor")[0].childNodes[0].nodeValue;
 
-                if (valorFrete === "0,00") {
-                    document.querySelector(".result_frete").innerHTML = '<span class="text-danger">Ocorreu um erro</span>'
+                let xmlDoc = $.parseXML(response);
+                let $xml = $(xmlDoc);
+
+                let valorFrete = $xml.find('Valor').text();
+                let PrazoFrete = $xml.find('PrazoEntrega').text();
+
+                if (valorFrete === "0,00" || PrazoFrete === '0') {
+                    $(".result_frete").html('<span class="text-danger">Ocorreu um erro</span>')
                     return
                 }
 
-                let PrazoFrete = xmlDoc.getElementsByTagName("PrazoEntrega")[0].childNodes[0].nodeValue;
-                document.querySelector(".result_frete").innerHTML = '<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>'
+                $('.result_frete').html('<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>');
             })
     }
 
