@@ -1,7 +1,6 @@
 <?php
 
 $product = $data['product'];
-//$frete = $data['frete'];
 
 
 $product['price'] = number_format($product['price'], 2, ",", ".");
