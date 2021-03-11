@@ -39,20 +39,18 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
             </a>
             <div class="row col-sm compra">
                 <div class="form-group frete">
-                    <form action="" method="" class="form-frete">
-                        <label class="label_frete" for="frete">Calcular frete e prazo
-                            <input type="text" class="form-control cep input-frete" name="frete" id="frete"
-                                   placeholder="calcular">
-                        </label>
-                        <button type="button" onclick="requestFrete()" class="button_frete btn btn-primary">Ok</button>
-                        <div class="result_frete" style="margin-right: 7rem;">
-                            <div class="clearfix" id="clearfix" style="display: none">
-                                <div class="spinner-border float-end" role="status">
-                                </div>
+                    <label class="label_frete" for="frete">Calcular frete e prazo
+                        <input type="text" class="form-control cep input-frete" name="frete" id="frete"
+                               placeholder="calcular" style="width: 10rem;">
+                    </label>
+                    <button type="button" onclick="requestFrete()" class="button_frete btn btn-primary">Ok</button>
+                    <div class="result_frete" style="margin-right: 7rem;">
+                        <div class="clearfix" id="clearfix" style="display: none;">
+                            <div class="spinner-border float-end" role="status">
                             </div>
-
                         </div>
-                    </form>
+
+                    </div>
                 </div>
             </div>
         </div>
