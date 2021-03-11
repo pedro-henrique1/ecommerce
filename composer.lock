@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "3004743176d50b6f67d6a98a998147a3",
+  "content-hash": "1d2e36f52a3bac3e04bac356f465d8fc",
   "packages": [
     {
       "name": "ircmaxell/random-lib",
@@ -15,16 +15,16 @@
         "reference": "e9e0204f40e49fa4419946c677eccd3fa25b8cf4"
       },
       "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/e9e0204f40e49fa4419946c677eccd3fa25b8cf4",
-                "reference": "e9e0204f40e49fa4419946c677eccd3fa25b8cf4",
-                "shasum": ""
-            },
-            "require": {
-                "ircmaxell/security-lib": "^1.1",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/e9e0204f40e49fa4419946c677eccd3fa25b8cf4",
+        "reference": "e9e0204f40e49fa4419946c677eccd3fa25b8cf4",
+        "shasum": ""
+      },
+      "require": {
+        "ircmaxell/security-lib": "^1.1",
+        "php": ">=5.3.2"
+      },
+      "require-dev": {
                 "friendsofphp/php-cs-fixer": "^1.11",
                 "mikey179/vfsstream": "^1.6",
                 "phpunit/phpunit": "^4.8|^5.0"
@@ -97,16 +97,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anthony Ferrara",
-                    "email": "ircmaxell@ircmaxell.com",
-                  "homepage": "http://blog.ircmaxell.com"
-                }
-            ],
+          "license": [
+            "MIT"
+          ],
+          "authors": [
+            {
+              "name": "Anthony Ferrara",
+              "email": "ircmaxell@ircmaxell.com",
+              "homepage": "http://blog.ircmaxell.com"
+            }
+          ],
           "description": "A Base Security Library",
           "homepage": "https://github.com/ircmaxell/SecurityLib",
           "support": {
@@ -168,39 +168,34 @@
     },
     {
       "name": "twbs/bootstrap",
-      "version": "v4.1.3",
+      "version": "v5.0.0-beta2",
       "source": {
         "type": "git",
         "url": "https://github.com/twbs/bootstrap.git",
-        "reference": "3b558734382ce58b51e5fc676453bfd53bba9201"
+        "reference": "e50c11b8c6434b6d68ea5897771e4d35fe12f5c3"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/twbs/bootstrap/zipball/3b558734382ce58b51e5fc676453bfd53bba9201",
-        "reference": "3b558734382ce58b51e5fc676453bfd53bba9201",
+        "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e50c11b8c6434b6d68ea5897771e4d35fe12f5c3",
+        "reference": "e50c11b8c6434b6d68ea5897771e4d35fe12f5c3",
         "shasum": ""
       },
       "replace": {
         "twitter/bootstrap": "self.version"
       },
       "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "3.3.x-dev"
-        }
-      },
       "notification-url": "https://packagist.org/downloads/",
       "license": [
         "MIT"
       ],
       "authors": [
         {
-          "name": "Jacob Thornton",
-          "email": "jacobthornton@gmail.com"
-        },
-        {
           "name": "Mark Otto",
           "email": "markdotto@gmail.com"
+        },
+        {
+          "name": "Jacob Thornton",
+          "email": "jacobthornton@gmail.com"
         }
       ],
       "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
@@ -217,23 +212,31 @@
       ],
       "support": {
         "issues": "https://github.com/twbs/bootstrap/issues",
-        "source": "https://github.com/twbs/bootstrap/tree/v4-dev"
+        "source": "https://github.com/twbs/bootstrap/tree/v5.0.0-beta2"
       },
-      "time": "2018-07-24T15:54:34+00:00"
+      "funding": [
+        {
+          "url": "https://opencollective.com/bootstrap",
+          "type": "open_collective"
+        }
+      ],
+      "time": "2021-02-10T16:14:51+00:00"
     }
   ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": {
-      "ext-mysqli": "*",
-      "ext-pdo": "*",
-      "ext-curl": "*",
-      "ext-simplexml": "*"
-    },
-    "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+  "packages-dev": [],
+  "aliases": [],
+  "minimum-stability": "stable",
+  "stability-flags": {
+    "twbs/bootstrap": 10
+  },
+  "prefer-stable": false,
+  "prefer-lowest": false,
+  "platform": {
+    "ext-mysqli": "*",
+    "ext-pdo": "*",
+    "ext-curl": "*",
+    "ext-simplexml": "*"
+  },
+  "platform-dev": [],
+  "plugin-api-version": "2.0.0"
 }

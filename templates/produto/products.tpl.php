@@ -40,37 +40,18 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
             <div class="row col-sm compra">
                 <div class="form-group frete">
                     <form action="" method="" class="form-frete">
-                        <label class="label" for="frete">Calcular frete e prazo
+                        <label class="label_frete" for="frete">Calcular frete e prazo
                             <input type="text" class="form-control cep input-frete" name="frete" id="frete"
                                    placeholder="calcular">
                         </label>
-                        <button type="button" onclick="requestFrete()" class="btn btn-primary">Ok</button>
+                        <button type="button" onclick="requestFrete()" class="button_frete btn btn-primary">Ok</button>
                         <div class="result_frete" style="margin-right: 7rem;">
+                            <div class="clearfix" id="clearfix" style="display: none">
+                                <div class="spinner-border float-end" role="status">
+                                </div>
+                            </div>
 
                         </div>
-                        <script>
-                            function requestFrete() {
-                                let cep = $(".input-frete").val();
-                                let cepFormate = cep.replace('-', '');
-
-                                let url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=' + cepFormate + '&nVlPeso=<?php echo $product['peso'] ?>&nCdFormato=<?php echo $product['formato'] ?>&nVlComprimento=<?php echo $product['comprimento'] ?>&nVlAltura=<?php echo $product['altura'] ?>&nVlLargura=<?php echo $product['largura'] ?>&nCdServico=04510&nVlDiametro=<?php echo $product['diametro'] ?>&StrRetorno=xml';
-                                $.ajax({
-                                    url: url,
-                                    type: 'GET',
-                                    cache: false,
-                                })
-                                    .done(function (data, textStatus, jqXHR) {
-                                        let response = jqXHR.responseText;
-                                        if (window.DOMParser) {
-                                            parser = new DOMParser();
-                                            xmlDoc = parser.parseFromString(response, "text/xml");
-                                        }
-                                        let valorFrete = xmlDoc.getElementsByTagName("Valor")[0].childNodes[0].nodeValue;
-                                        let PrazoFrete = xmlDoc.getElementsByTagName("PrazoEntrega")[0].childNodes[0].nodeValue;
-                                        document.querySelector(".result_frete").innerHTML = '<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>'
-                                    })
-                            }
-                        </script>
                     </form>
                 </div>
             </div>
@@ -78,16 +59,40 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
     </div>
 </div>
 
+
 <script>
+    function requestFrete() {
+        let cep = $(".input-frete").val();
+        let cepFormate = cep.replace('-', '');
+        document.getElementById('clearfix').style.display = 'block'
+
+
+        let url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=' + cepFormate + '&nVlPeso=<?php echo $product['peso'] ?>&nCdFormato=<?php echo $product['formato'] ?>&nVlComprimento=<?php echo $product['comprimento'] ?>&nVlAltura=<?php echo $product['altura'] ?>&nVlLargura=<?php echo $product['largura'] ?>&nCdServico=04510&nVlDiametro=<?php echo $product['diametro'] ?>&StrRetorno=xml';
+        $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,
+        })
+            .done(function (data, textStatus, jqXHR) {
+                console.log(data, textStatus, jqXHR)
+                let response = jqXHR.responseText;
+                if (window.DOMParser) {
+                    parser = new DOMParser();
+                    xmlDoc = parser.parseFromString(response, "text/xml");
+                }
+                let valorFrete = xmlDoc.getElementsByTagName("Valor")[0].childNodes[0].nodeValue;
+
+                if (valorFrete === "0,00") {
+                    document.querySelector(".result_frete").innerHTML = '<span class="text-danger">Ocorreu um erro</span>'
+                    return
+                }
+
+                let PrazoFrete = xmlDoc.getElementsByTagName("PrazoEntrega")[0].childNodes[0].nodeValue;
+                document.querySelector(".result_frete").innerHTML = '<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>'
+            })
+    }
+
     $(document).ready(function ($) {
         $('.input-frete').mask('00000-000');
     });
-
-    // $.ajax({
-    //
-    //     url: 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=$cepFrete&nVlPeso=$peso&nCdFormato=$formato&nVlComprimento=$comprimento&nVlAltura=$altura&nVlLargura=$largura&nCdServico=04510&nVlDiametro=$diametro&StrRetorno=xml';
-    //     type: "GET",
-    //     data: '',
-    //     dataType: "xml"
-    // })
 </script>

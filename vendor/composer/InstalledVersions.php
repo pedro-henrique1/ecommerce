@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '35ed493570fd051ed93d64f4603e3bcfddc4e6f0',
+    'reference' => 'c03ae8663c42b1ee4413e27098fb3c5114ecb131',
     'name' => 'pedro/ecomerce',
   ),
   'versions' => 
@@ -58,22 +58,22 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '35ed493570fd051ed93d64f4603e3bcfddc4e6f0',
+      'reference' => 'c03ae8663c42b1ee4413e27098fb3c5114ecb131',
     ),
     'twbs/bootstrap' => 
     array (
-      'pretty_version' => 'v4.1.3',
-      'version' => '4.1.3.0',
+      'pretty_version' => 'v5.0.0-beta2',
+      'version' => '5.0.0.0-beta2',
       'aliases' => 
       array (
       ),
-      'reference' => '3b558734382ce58b51e5fc676453bfd53bba9201',
+      'reference' => 'e50c11b8c6434b6d68ea5897771e4d35fe12f5c3',
     ),
     'twitter/bootstrap' => 
     array (
       'replaced' => 
       array (
-        0 => 'v4.1.3',
+        0 => 'v5.0.0-beta2',
       ),
     ),
   ),
