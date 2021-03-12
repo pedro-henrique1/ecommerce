@@ -40,7 +40,7 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                 <div class="form-group frete">
                     <label class="label_frete" for="frete">Calcular frete e prazo
                         <input type="text" class="form-control cep input-frete" name="frete" id="frete"
-                               placeholder="calcular" style="width: 10rem;">
+                               placeholder="00000-000" style="width: 10rem;">
                     </label>
                     <button type="button" onclick="requestFrete()" class="button_frete btn btn-primary">Ok</button>
                     <div class="result_frete" style="margin-right: 7rem;">
