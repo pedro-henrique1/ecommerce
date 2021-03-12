@@ -24,7 +24,8 @@
 <h1 align="center">Status</h1>
 
  <h4 align="center"> 
-	🚧  Ecommerce 🚀 Em  construcão...  🚧
+	Finalizado 🚀
+<!-- 	🚧  Ecommerce 🚀 Em  construcão...  🚧 -->
 </h4>
 
 <hr>
