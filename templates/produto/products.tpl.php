@@ -60,6 +60,7 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
 <script>
     function requestFrete() {
         cep = $(".input-frete").val().replace('-', '');
+        console.log(cep)
 
         if (cep === "") {
             $(".result_frete").html('<span class="text-danger">Preencha o cep corretamente</span>')
@@ -76,6 +77,7 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
         })
             .done(function (data, textStatus, jqXHR) {
                 let response = jqXHR.responseText;
+                console.log(data, textStatus, jqXHR)
 
                 let xmlDoc = $.parseXML(response);
                 let $xml = $(xmlDoc);
@@ -89,6 +91,9 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                 }
 
                 $('.result_frete').html('<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>');
+            })
+            .fail(function (error) {
+                console.log(error)
             })
     }
 

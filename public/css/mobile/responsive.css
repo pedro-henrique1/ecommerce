@@ -126,6 +126,7 @@
 @media (min-width: 1024px) and (max-width: 1440px) {
     .navbar {
         width: 100%;
+        height: 4pc;
         font-size: large;
     }
 
