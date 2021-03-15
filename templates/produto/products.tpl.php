@@ -56,11 +56,9 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
     </div>
 </div>
 
-
 <script>
     function requestFrete() {
         cep = $(".input-frete").val().replace('-', '');
-        console.log(cep)
 
         if (cep === "") {
             $(".result_frete").html('<span class="text-danger">Preencha o cep corretamente</span>')
@@ -70,6 +68,13 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
 
 
         let url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?sCepOrigem=77006622&sCepDestino=' + cep + '&nVlPeso=<?php echo $product['peso'] ?>&nCdFormato=<?php echo $product['formato'] ?>&nVlComprimento=<?php echo $product['comprimento'] ?>&nVlAltura=<?php echo $product['altura'] ?>&nVlLargura=<?php echo $product['largura'] ?>&nCdServico=04510&nVlDiametro=<?php echo $product['diametro'] ?>&StrRetorno=xml';
+        $.ajaxSetup({
+            error: function (xhr) {
+                return $(".result_frete").html('<span class="text-danger">Ocorreu um erro</span>')
+
+            }
+        });
+
         $.ajax({
             url: url,
             type: 'GET',
@@ -77,7 +82,6 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
         })
             .done(function (data, textStatus, jqXHR) {
                 let response = jqXHR.responseText;
-                console.log(data, textStatus, jqXHR)
 
                 let xmlDoc = $.parseXML(response);
                 let $xml = $(xmlDoc);
@@ -86,14 +90,14 @@ $product['description'] = substr($product['description'], 0, 310) . '...';
                 let PrazoFrete = $xml.find('PrazoEntrega').text();
 
                 if (valorFrete === "0,00" || PrazoFrete === '0') {
-                    $(".result_frete").html('<span class="text-danger">Ocorreu um erro</span>')
+                    $(".result_frete").html('<span class="text-danger">Digite o cep corretamente</span>')
                     return
                 }
 
                 $('.result_frete').html('<span> Valor frete R$' + valorFrete + ' </br> Prazo de entrega ' + PrazoFrete + ' dias </span>');
             })
             .fail(function (error) {
-                console.log(error)
+                console.log("erro")
             })
     }
 
